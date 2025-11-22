@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Materi Pembelajaran — Fadilah Kusnadi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="nav-wrap">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Fadilah Kusnadi</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="profil.html" class="nav-link">Profil</a>
+        <a href="pengalaman.html" class="nav-link">Pengalaman</a>
+        <a href="nilai.html" class="nav-link">Nilai</a>
+        <a href="gallery.html" class="nav-link">Galeri</a>
+        <a href="materi.html" class="nav-link active">Materi Pembelajaran</a>
+      </nav>
+      <button class="hamburger" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section materi-section">
+      <div class="container">
+        <h2 class="section-title">Materi Pembelajaran</h2>
+        <p class="section-sub">Pilih materi untuk menampilkan video pembelajaran.</p>
+
+        <!-- Pilihan materi -->
+        <div class="materi-controls card">
+          <label for="materi-select"><strong>Pilih Materi:</strong></label>
+          <select id="materi-select" class="materi-select">
+            <option value="pencak-silat">Pencak Silat</option>
+            <option value="bola-basket">Bola Basket</option>
+            <option value="sepak-bola">Sepak Bola</option>
+            <option value="senam-irama-1">Senam Irama 1</option>
+            <option value="senam-irama-2">Senam Irama 2</option>
+            <option value="tenis-meja">Tenis Meja</option>
+            <option value="kebugaran-jasmani">Kebugaran Jasmani</option>
+            <option value="bulutangkis">Bulutangkis / Badminton</option>
+            <option value="bola-voli">Bola Voli</option>
+          </select>
+        </div>
+
+        <!-- Display materi -->
+        <div id="materi-display" class="card materi-display">
+          <h3 id="materi-title">Pencak Silat</h3>
+
+          <div class="video-wrap">
+            <iframe id="materi-video" src="https://www.youtube.com/embed/tHZvw4P4OcI" 
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <p id="materi-desc" class="materi-desc">Video pengantar teknik dasar Pencak Silat.</p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2025 Fadilah Kusnadi</p></div>
+  </footer>
+
+  <script>
+    const MATERI = {
+      "pencak-silat": {
+        title: "Pencak Silat",
+        yt: "tHZvw4P4OcI",
+        desc: "Video pengantar teknik dasar Pencak Silat."
+      },
+      "bola-basket": {
+        title: "Bola Basket",
+        yt: "GQWem-uX8tA",
+        desc: "Materi dasar dan teknik permainan bola basket."
+      },
+      "sepak-bola": {
+        title: "Sepak Bola",
+        yt: "bjFgfW6nYyU",
+        desc: "Latihan passing, dribbling, dan teknik dasar sepak bola."
+      },
+      "senam-irama-1": {
+        title: "Senam Irama 1",
+        yt: "tQ8m8m8zF7s",
+        desc: "Materi senam irama modul pertama."
+      },
+      "senam-irama-2": {
+        title: "Senam Irama 2",
+        yt: "qvQSLvi_5WA",
+        desc: "Lanjutan materi senam irama."
+      },
+      "tenis-meja": {
+        title: "Tenis Meja",
+        yt: "E5cFOq42_d4",
+        desc: "Teknik dasar tenis meja untuk siswa."
+      },
+      "kebugaran-jasmani": {
+        title: "Kebugaran Jasmani",
+        yt: "8pvWXAd4hqw",
+        desc: "Latihan kebugaran jasmani."
+      },
+      "bulutangkis": {
+        title: "Bulutangkis / Badminton",
+        yt: "1oorTNK_qw4",
+        desc: "Teknik dasar bulutangkis."
+      },
+      "bola-voli": {
+        title: "Bola Voli",
+        yt: "j6pG5qgZGsE",
+        desc: "Video teknik dasar bola voli."
+      }
+    };
+
+    const select = document.getElementById("materi-select");
+    const titleEl = document.getElementById("materi-title");
+    const iframe = document.getElementById("materi-video");
+    const descEl = document.getElementById("materi-desc");
+
+    function loadMateri(key) {
+      const data = MATERI[key];
+      titleEl.textContent = data.title;
+      iframe.src = `https://www.youtube.com/embed/${data.yt}`;
+      descEl.textContent = data.desc;
+    }
+
+    select.addEventListener("change", e => loadMateri(e.target.value));
+  </script>
+</body>
+</html>
