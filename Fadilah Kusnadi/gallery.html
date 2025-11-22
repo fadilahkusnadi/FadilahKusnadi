@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fadilah Kusnadi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="nav-wrap">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Fadilah Kusnadi</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="profil.html" class="nav-link">Profil</a>
+        <a href="pengalaman.html" class="nav-link">Pengalaman</a>
+        <a href="nilai.html" class="nav-link">Nilai</a>
+        <a href="gallery.html" class="nav-link">Galeri</a>
+        <a href="material.html" class="nav-link active">Materi Pembelajaran</a>
+      </nav>
+      <button class="hamburger" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="section-title">Galeri Basket & Aktivitas</h2>
+        <p class="section-sub">Klik foto untuk melihat versi besar (buka di tab baru).</p>
+
+        <div class="gallery-container">
+          <!-- Tambah sebanyak yang mau: gunakan naming photo1.jpg, photo2.jpg, ... di folder images/ -->
+          <div class="gallery-item"><img src="foto2.jpg" alt="Aktivitas 1"></div>
+          <div class="gallery-item"><img src="foto5.jpg" alt="Aktivitas 2"></div>
+          <div class="gallery-item"><img src="foto19.jpg" alt="Aktivitas 3"></div>
+          <div class="gallery-item"><img src="foto18.jpg" alt="Aktivitas 4"></div>
+          <div class="gallery-item"><img src="foto9.jpg" alt="Aktivitas 5"></div>
+          <div class="gallery-item"><img src="foto10.jpg" alt="Aktivitas 6"></div>
+          <div class="gallery-item"><img src="foto11.jpg" alt="Aktivitas 7"></div>
+          <div class="gallery-item"><img src="foto12.jpg" alt="Aktivitas 8"></div>
+          <div class="gallery-item"><img src="foto13.jpg" alt="Aktivitas 9"></div>
+          <div class="gallery-item"><img src="foto14.jpg" alt="Aktivitas 10"></div>
+          <div class="gallery-item"><img src="foto15.jpg" alt="Aktivitas 11"></div>
+          <div class="gallery-item"><img src="foto16.jpg" alt="Aktivitas 12"></div>
+          <div class="gallery-item"><img src="foto17.jpg" alt="Aktivitas 13"></div>
+          <div class="gallery-item"><img src="foto20.jpg" alt="Aktivitas 14"></div>
+          <div class="gallery-item"><img src="foto6.jpg" alt="Aktivitas 15"></div>
+          <div class="gallery-item"><img src="foto8.jpg" alt="Aktivitas 16"></div>
+          <!-- Hapus/acak sesuai kebutuhan -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>© 2025 Fadilah Kusnadi</p></div></footer>
+
+  <script>
+    document.querySelectorAll('.hamburger').forEach(h=>{
+      h.addEventListener('click', ()=> document.querySelector('.main-nav').classList.toggle('open'));
+    });
+
+    // buka gambar di tab baru ketika diklik
+    document.querySelectorAll('.gallery-item img').forEach(img=>{
+      img.style.cursor='pointer';
+      img.addEventListener('click', ()=> window.open(img.src, '_blank'));
+    });
+  </script>
+</body>
+</html>

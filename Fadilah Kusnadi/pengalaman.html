@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fadilah Kusnadi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="nav-wrap">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Fadilah Kusnadi</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="profil.html" class="nav-link">Profil</a>
+        <a href="pengalaman.html" class="nav-link">Pengalaman</a>
+        <a href="nilai.html" class="nav-link">Nilai</a>
+        <a href="gallery.html" class="nav-link">Galeri</a>
+        <a href="material.html" class="nav-link active">Materi Pembelajaran</a>
+      </nav>
+      <button class="hamburger" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="timeline-section">
+      <div class="container">
+        <h2>Pengalaman Mengajar & Melatih</h2>
+
+        <div class="timeline card">
+          <div class="year">2022</div>
+          <p>
+            <ol>Sirius Basketball Club</ol> 
+            <ol>SMPN 12</ol> 
+            <ol>SMAN 9 Bekasi</ol></p>
+
+          <div class="year">2023</div>
+          <p>
+            <ol>Fortius Basketball</ol>
+            <ol>Indonesia Muda Basketball Club</ol>
+            <ol>SD-SMA Tunas Jaka Sampurna</ol> 
+            <ol>SD Harapan Mulia</ol> 
+            <ol>SMPN 17</ol> 
+            <ol>SMP Penabur Summarecon</ol> 
+            <ol>SMPN 38 Bekasi</ol> 
+            <ol>SMA Korpri</ol>
+        </p>
+
+          <div class="year">2024</div>
+          <p>
+            <ol>SMA Dharma Putra Advent</ol> 
+            <ol>SMP Pa Van Der Steur</ol> 
+            <ol>SMP Muhammadiyah 50 Jakarta</ol>
+            <ol>SMKN 5 Bekasi</ol> 
+        </p>
+
+          <div class="year">2025</div>
+          <p>
+            <ol>SMK ANANDA Bekasi</ol> 
+            <ol>SMAN 14 Bekasi</ol> 
+            <ol>SMA Gema Nurani</ol> 
+            <ol>SMAN 3 Babelan</ol>
+        </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>© 2025 Fadilah Kusnadi</p></div></footer>
+
+  <script>
+    document.querySelectorAll('.hamburger').forEach(h=>{
+      h.addEventListener('click', ()=> document.querySelector('.main-nav').classList.toggle('open'));
+    });
+  </script>
+</body>
+</html>
